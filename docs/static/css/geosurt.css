@@ -52,7 +52,7 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
 .method-heading { margin: 0 auto 29px; text-align: center; }
 .section-kicker { color: var(--blue); font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 13px; }
 .method-heading .section-title { margin-bottom: 15px !important; }
-.method-description { color: var(--muted); font-size: 17px; line-height: 1.8; text-wrap: pretty; }
+.method-description { color: var(--muted); font-size: 17px; line-height: 1.8; text-align: justify; text-wrap: pretty; }
 .video-figure { margin: 0; }
 .video-figure video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; object-fit: contain; border: 1px solid var(--line); background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 26px rgba(31, 47, 63, .06); }
 .video-figure figcaption { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-top: 15px; font-size: 13px; color: var(--muted); line-height: 1.6; }
@@ -73,7 +73,7 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
   .project-summary { font-size: 16px; }
   .section { padding: 41px 22px; }
   .site-footer { padding-left: 22px; padding-right: 22px; }
-  .abstract-text { font-size: 15px; line-height: 1.85; text-align: left; }
+  .abstract-text { font-size: 15px; line-height: 1.85; }
   .section-title { font-size: 26px; }
   .method-description { font-size: 15px; }
   .video-figure video { border-radius: 6px; }
