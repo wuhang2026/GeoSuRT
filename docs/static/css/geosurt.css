@@ -23,7 +23,11 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
 .nav-links a:hover { color: var(--blue); }
 .title-container, .reading-container, .results-container, .site-footer .container { max-width: var(--content-width) !important; }
 .publication-header .hero-body { padding: 62px 28px 54px; }
-.publication-title { font-size: clamp(30px, 3.35vw, 47px); font-weight: 720; line-height: 1.2; letter-spacing: -1.1px; text-wrap: balance; margin: 0 auto 29px !important; color: var(--ink); }
+.title-container { width: 100%; }
+.publication-title { max-width: 1240px; width: calc(100% - 64px); font-size: clamp(24px, 2.45vw, 36px); font-weight: 720; line-height: 1.25; letter-spacing: -.65px; text-wrap: balance; margin: 0 auto 29px !important; color: var(--ink); }
+@media (min-width: 1024px) {
+  .publication-title .title-line { display: block; white-space: nowrap; }
+}
 .project-name { color: var(--blue); }
 .publication-authors { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 25px; font-size: 21px; margin-bottom: 19px; }
 .author-block { white-space: nowrap; }
@@ -69,7 +73,7 @@ a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid 
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 12px; }
   .publication-header .hero-body { padding: 42px 22px 39px; }
-  .publication-title { font-size: 33px; line-height: 1.22; letter-spacing: -.8px; margin-bottom: 25px !important; }
+  .publication-title { width: 100%; font-size: 33px; line-height: 1.22; letter-spacing: -.8px; margin-bottom: 25px !important; }
   .publication-authors { font-size: 18px; gap: 10px 19px; }
   .affiliations { font-size: 12.5px; line-height: 1.8; }
   .affiliations p + p { margin-top: 7px; }
