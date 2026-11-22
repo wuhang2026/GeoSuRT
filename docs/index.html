@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoSuRT: Surgeon-Centric Intraoperative Monitoring</title>
+  <meta name="description" content="GeoSuRT combines skeleton graph-guided surgeon mesh recovery with geometry-assisted online tracking from monocular operating-room images.">
+  <meta name="author" content="Hang Wu, Bolin Li, Yubin Miao, Xiaojun Chen">
+  <meta name="keywords" content="GeoSuRT, SkeGLNet, GeoTrack, human mesh recovery, surgeon tracking, MHR, surgical data science">
+  <meta name="theme-color" content="#1f5597">
+  <meta name="citation_title" content="GeoSuRT: Surgeon-Centric Intraoperative Monitoring using Joint Graph-Guided Mesh Recovery and Geometry-Assisted Tracking">
+  <meta name="citation_author" content="Wu, Hang">
+  <meta name="citation_author" content="Li, Bolin">
+  <meta name="citation_author" content="Miao, Yubin">
+  <meta name="citation_author" content="Chen, Xiaojun">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="GeoSuRT">
+  <meta property="og:title" content="GeoSuRT: Surgeon-Centric Intraoperative Monitoring">
+  <meta property="og:description" content="Joint Graph-Guided Mesh Recovery and Geometry-Assisted Tracking for surgical teams.">
+  <meta property="og:url" content="https://wuhang2026.github.io/GeoSuRT/">
+  <meta property="og:image" content="https://wuhang2026.github.io/GeoSuRT/static/images/social-preview.jpg">
+  <meta property="og:image:alt" content="GeoSuRT reconstructs 3D surgeon meshes from an operating-room image.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GeoSuRT: Surgeon-Centric Intraoperative Monitoring">
+  <meta name="twitter:description" content="Joint Graph-Guided Mesh Recovery and Geometry-Assisted Tracking for surgical teams.">
+  <meta name="twitter:image" content="https://wuhang2026.github.io/GeoSuRT/static/images/social-preview.jpg">
+  <link rel="canonical" href="https://wuhang2026.github.io/GeoSuRT/">
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/geosurt.css?v=v23-relaunch">
+  <script defer src="static/js/geosurt.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Page sections">
+      <a class="wordmark" href="#top">GeoSuRT<span aria-hidden="true">.</span></a>
+      <div class="nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="#skeglnet">SkeGLNet</a>
+        <a href="#geotrack">GeoTrack</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="hero publication-header" aria-labelledby="paper-title">
+      <div class="hero-body">
+        <div class="container has-text-centered title-container">
+          <h1 id="paper-title" class="title publication-title"><span class="title-line"><span class="project-name">GeoSuRT:</span> Surgeon-Centric Intraoperative Monitoring using Joint</span>
+            <span class="title-line">Graph-Guided Mesh Recovery and Geometry-Assisted Tracking</span></h1>
+          <div class="publication-authors">
+            <span class="author-block">Hang Wu<sup>1,2</sup></span>
+            <span class="author-block">Bolin Li<sup>2</sup></span>
+            <span class="author-block"><a href="https://me.sjtu.edu.cn/en/FullTimeTeacher/miaoyubin.html" target="_blank" rel="noopener noreferrer">Yubin Miao</a><sup>2</sup></span>
+            <span class="author-block"><a href="https://me.sjtu.edu.cn/en/FullTimeTeacher/chenxiaojun.html" target="_blank" rel="noopener noreferrer">Xiaojun Chen</a><sup>2,3,*</sup></span>
+          </div>
+          <div class="affiliations">
+            <p><sup>1</sup> School of Intelligent Manufacturing and Robotics, Shanghai Dian Ji University, Shanghai, 201306, China</p>
+            <p><sup>2</sup> School of Mechanical Engineering, Shanghai Jiao Tong University, Shanghai, 200240, China</p>
+            <p><sup>3</sup> Institute of Medical Robotics, Shanghai Jiao Tong University, Shanghai, 200240, China</p>
+          </div>
+          <p class="author-note"><sup>*</sup> Corresponding author</p>
+          <div class="publication-links" aria-label="Research resources">
+            <button class="button resource-link resource-pending" type="button" disabled aria-disabled="true" title="Paper link to be added" id="paper-link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg><span>Paper</span>
+            </button>
+            <a class="button is-dark resource-link" href="https://github.com/wuhang2026/GeoSuRT" target="_blank" rel="noopener noreferrer" id="code-link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg><span>Code</span>
+            </a>
+            <button class="button resource-link resource-pending" type="button" disabled aria-disabled="true" title="Dataset link to be added" id="dataset-link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg><span>Dataset</span>
+            </button>
+          </div>
+          <div class="section-jumps"><a href="#skeglnet">Explore reconstruction</a><a href="#geotrack">Explore tracking</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section abstract-section" aria-labelledby="abstract-title">
+      <div class="container reading-container">
+        <h2 id="abstract-title" class="title section-title has-text-centered">Abstract</h2>
+        <div class="content abstract-text">
+          <p>Surgeon-centric operating room (OR) monitoring aims to reconstruct and track the motions and interactions of surgical teams, which can actively support downstream tasks including identity recognition, action interpretation and phase reasoning. However, existing approaches heavily rely on the appearance patterns encoded from general visual feature extractors, which could be challenged by OR environments where sterile clothing reduces appearance differences and frequent interaction raises occlusions.</p>
+          <p>Therefore, we present Geometry-guided Surgeon Reconstruction and Tracking (GeoSuRT), a new framework that leverages skeletal structure to instruct surgeon state reasoning. Its Skeleton Graph Lifting Network (SkeGLNet) learns multi-scale joint graph features to quantify person-specific visual relations, then selectively fuses fine-grained visual and geometric representations to regress human parameters. Its Geometry-Assisted Tracking (GeoTrack) constructs geometry-based spatiotemporal memory, which is integrated with local continuity analysis to constitute a unified online identity association mechanism. These contributions provide biological-consistent skeletal evidences for GeoSuRT when visual clues are absent or ambiguous, and make it more suitable for complicated OR environments.</p>
+          <p>Comprehensive evaluations are conducted on three datasets including laboratory, synthetic and public clinical scenes. Compared with the state-of-the-art approach on the largest dataset, SkeGLNet reduces mesh vertex errors by 10.7%, 6.4% and 26.8%, respectively, using only 51.0% of DGG-HMR’s parameters in the LabSurg configuration. On long term tracking, GeoTrack achieves relative 11.4% improvements on composite tracking accuracy HOTA and reduces identity switches IDSW by 76.9%. These results demonstrate that GeoTrack is capable of supporting downstream surgeon monitoring tasks and facilitating intelligent OR systems of the next generation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skeglnet" class="section results-section" aria-labelledby="skeglnet-title">
+      <div class="container results-container">
+        <div class="method-heading">
+          <h2 id="skeglnet-title" class="title section-title">SkeGLNet: Surgeon Mesh Recovery</h2>
+        </div>
+        <figure class="video-figure">
+          <video id="skeglnet-video" controls playsinline preload="none" poster="static/images/skeglnet-poster.jpg?v=v23-relaunch" width="2560" height="1440" aria-label="SkeGLNet reconstruction of the paper’s four AIIST operating-room examples">
+            <source src="static/videos/skeglnet.mp4?v=v23-relaunch" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <section id="geotrack" class="section results-section tracking-section" aria-labelledby="geotrack-title">
+      <div class="container results-container">
+        <div class="method-heading">
+          <h2 id="geotrack-title" class="title section-title">GeoTrack: Geometry-Assisted Tracking</h2>
+        </div>
+        <figure class="video-figure">
+          <video id="geotrack-video" controls playsinline preload="none" poster="static/images/geotrack-poster.jpg?v=v23-relaunch" width="2560" height="1440" aria-label="GeoTrack online surgeon tracking with corresponding 3D surgeon reconstructions and trajectories">
+            <source src="static/videos/geotrack.mp4?v=v23-relaunch" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer site-footer">
+    <div class="container has-text-centered">
+      <p class="footer-brand">GeoSuRT</p>
+      <p>Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a> and <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.</p>
+      <p class="license-note">Website design licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
